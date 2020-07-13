@@ -1,4 +1,20 @@
-n<?PHP
+<?PHP
+
+/* SQL JOINS CHECK THE IMAGE IN YOUR SMART PHONE*/
+// 
+select from table A left join table B on A.key = B.key
+
+// 
+select from table a a left join table B on a.key = b.key where b.key IS NOT NULL
+
+select from table A INNER JOIN table B ON A.KEY = B.KEY 
+
+SELECT FROM TABLE a right join Table B ON a.key = b.key
+select from table A full outer join table B ON A.KEY = B.KEY
+SELECT FROM TABLE A FULL OUTER JOIN TABLE B ON A.KEY = B.KEY WHERE A.KEY IS NULL OR B.KEY IS NULL
+SELECT FROM TABLE A RIGHT JOIN TABLE B B ON A.KEY = BKEY WHERE A.KEY IS NULL 
+
+
 
 //How to group by month from Date field using sql
 SELECT  Closing_Date = DATEADD(MONTH, DATEDIFF(MONTH, 0, Closing_Date), 0), 
