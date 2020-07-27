@@ -261,3 +261,27 @@ db.inventory.find( { $nor: [ { price: 1.99 }, { qty: { $lt: 20 } }, { sale: true
 
 // or
 db.inventory.find( { $or: [ { quantity: { $lt: 20 } }, { price: 10 } ] } )
+
+
+Auth.find({ updated_at: { $gt: new Date().getTime() - TET * 60 * 1000 } },{ access_token: true });
+
+
+/* MONGOOSE MOST USED QUERY */
+Model.deleteMany()
+Model.deleteOne()
+Model.find()
+Model.findById()
+Model.findByIdAndDelete()
+Model.findByIdAndRemove()
+Model.findByIdAndUpdate()
+Model.findOne()
+Model.findOneAndDelete()
+Model.findOneAndRemove()
+Model.findOneAndReplace()
+Model.findOneAndUpdate()
+Model.replaceOne()
+Model.updateMany()
+Model.updateOne()
+
+// Check below link alot of good articles 
+//https://mongoosejs.com/docs/discriminators.html
