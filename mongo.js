@@ -83,3 +83,18 @@ Usercarforsale.find({
  	 	
  	 })
  })
+
+// Calculating equity and cashbalance sum
+
+ MongoClient.connect(url,  {useNewUrlParser: true, useUnifiedTopology: true}, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("wf");
+  dbo.collection("accounts").aggregate([{$group: {
+    _id: null,
+    totalEquity : {$sum: "$equity.equityValue"},
+    totalCash : {$sum: "$cash.cashBalance"}
+  }}]).toArray(function(err, result) {
+    if (err) throw err;
+    console.log(result)
+  });
+});

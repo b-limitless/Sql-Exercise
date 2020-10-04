@@ -5,7 +5,7 @@
 select from table A left join table B on A.key = B.key
 
 // 
-select from table a a left join table B on a.key = b.key where b.key IS NOT NULL
+select from table a a left join table B on a.key = b.key where b.key IS NULL
 
 select from table A INNER JOIN table B ON A.KEY = B.KEY 
 
@@ -259,7 +259,7 @@ from mass_table;
 
 //How do you get the Nth-highest salary from the Employee table without a subquery or CTE?
 /*
- * SELECT salary from Employee order by salary DESC LIMIT 2,1
+ * SELECT salary from Employee order by salary DESC LIMIT 1,1
  * */
 
 
